@@ -50,6 +50,16 @@ def greet_person():
 
     return render_template("compliment.html", person=player, compliment=compliment)
 
+@app.route("/game")
+def show_mablib_form():
+    """Shows madlib form."""
+
+    player = request.args.get("person")
+
+    compliment = choice(AWESOMENESS)
+
+    return render_template("compliment.html", person=player, compliment=compliment)
+
 
 if __name__ == "__main__":
     # Setting debug=True gives us error messages in the browser and also
