@@ -54,11 +54,7 @@ def greet_person():
 def show_mablib_form():
     """Shows madlib form."""
 
-    player = request.args.get("person")
-
-    compliment = choice(AWESOMENESS)
-
-    return render_template("compliment.html", person=player, compliment=compliment)
+    return render_template("game.html")
 
 
 if __name__ == "__main__":
